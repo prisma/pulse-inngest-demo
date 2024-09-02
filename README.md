@@ -61,7 +61,7 @@ You can run this complete demo app by setting up all services and then adding a 
     3. Pulse service
 1. Open https://localhost:3000 in your browser - you should see a simple UI with a form
 1. Enter a user name and email address, then click the button
-1. Watch your terminal logs to observe the events
+1. Watch your terminal logs to observe the events. Prisma Pulse will detect the database change that was applied by NextJS, and submit an event to Inngest. Inngest will pick up the event, and initiate a workflow to onboard the new user. The code will not send real emails, but will simply demonstrate the functionality of the workflow.
 
 
 ### Deploy live
