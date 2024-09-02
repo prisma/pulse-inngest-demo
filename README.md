@@ -30,14 +30,15 @@ Follow the steps below to get both set up and running.
 
 1. Go into the `pulse` directory, and install dependencies: `npm install`
 1. Rename the `.env.example` file to `.env` and set up your environment variables:
-    1. `DATABASE_URL` is the connection string to your database (the same as above)
+    1. `DATABASE_URL` is the connection string to your database
     1. `PULSE_API_KEY` is found in your [Prisma Data Platform](https://console.prisma.io/sign-up) account. See [the Pulse documentation](https://www.prisma.io/docs/platform/about#environment) for help in getting your API key.
     1. `INNGEST_EVENT_KEY` and `INNGEST_SIGNING_KEY` are used to authenticate the service to Inngest in order to submit events. You hopefully set this up in an earlier step.
-1. The Prisma schema file in this project contains a single User model. You can map this model to the database and create the corresponding User table using the following command: `npx prisma migrate dev --name init`
+1. The Prisma schema file in this project contains a single `User` model. You can map this model to the database and create the corresponding `User` table using the following command: `npx prisma migrate dev --name init`
 1. Generate the Prisma client: `npx prisma generate`
 1. Run the Pulse service:
-    1. `yarn build`
-    1. `yarn start`
+    ```terminal
+	 yarn build && yarn start
+	```
 
 #### NextJS
 
